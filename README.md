@@ -36,16 +36,20 @@ Docker Desktop (or Orbstack) with Kubernetes enabled and helm CLI is required if
 
 The playground runs several services. The TCP ports used may clash with existing services you run, such as MySQL or Postgres.
 
-| Docker container      | Ports used             |
-| --------------------- | ---------------------- |
-| playground-gravitino  | [gravitino-ui 8090](http://gravitino:8090/) </br> [gravitino-rest 9001](http://gravitino:9001/)              |
-| playground-hive       | [3307](#) </br> HDFS_RPC  [hdfs://gravitino:19000](#) </br> HMS  [thrift://gravitino:19083](#) </br> WEBHDFS  [webhdfs://gravitino:60070](http://gravitino:60070/) |
-| playground-mysql      | [13306](#)                  |
-| playground-postgresql | [15342](#)                  |
-| playground-trino      | [18080](http://gravitino:18080/)                  |
-| playground-jupyter    | [18888](http://gravitino:18888/)                  |
-| playground-prometheus | [19090](http://gravitino:19090/)                  |
-| playground-grafana    | [13000](http://gravitino:13000/)                  |
+| Docker container      | Ports used             | Protocals                          |
+| --------------------- | ---------------------- | ---------------------------------- |
+| playground-gravitino  | 8090  UI               | http://gravitino:8090/             |
+| playground-gravitino  | 9001  Rest             | http://gravitino:9001/             |
+| playground-hive       | 3307                   |                                    |
+| playground-hive       | 19000 HDFS_RPC         | hdfs://gravitino:19000             |
+| playground-hive       | 60070 WEBHDFS          | http://gravitino:60070/            |
+| playground-hive       | 19083 HMS-Thirft       | thrift://gravitino:19083           |
+| playground-mysql      | 13306                  |                                    |
+| playground-postgresql | 15342                  |                                    |
+| playground-trino      | 18080                  | http://gravitino:18080/            |
+| playground-jupyter    | 18888                  | http://gravitino:18888/            |
+| playground-prometheus | 19090                  | http://gravitino:19090/            |
+| playground-grafana    | 13000                  | http://gravitino:13000/            |
 
 ## Playground usage
 
