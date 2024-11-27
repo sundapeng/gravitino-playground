@@ -38,14 +38,14 @@ The playground runs several services. The TCP ports used may clash with existing
 
 | Docker container      | Ports used             |
 | --------------------- | ---------------------- |
-| playground-gravitino  | 8090 9001              |
-| playground-hive       | 3307 19000 19083 60070 |
-| playground-mysql      | 13306                  |
-| playground-postgresql | 15342                  |
-| playground-trino      | 18080                  |
-| playground-jupyter    | 18888                  |
-| playground-prometheus | 19090                  |
-| playground-grafana    | 13000                  |
+| playground-gravitino  | [gravitino-ui 8090](http://gravitino:8090/) </br> [gravitino-rest 9001](http://gravitino:9001/)              |
+| playground-hive       | [3307](#) </br> HDFS_RPC  [hdfs://gravitino:19000](#) </br> HMS  [thrift://gravitino:19083](#) </br> WEBHDFS  [webhdfs://gravitino:60070](http://gravitino:60070/) |
+| playground-mysql      | [13306](#)                  |
+| playground-postgresql | [15342](#)                  |
+| playground-trino      | [18080](http://gravitino:18080/)                  |
+| playground-jupyter    | [18888](http://gravitino:18888/)                  |
+| playground-prometheus | [19090](http://gravitino:19090/)                  |
+| playground-grafana    | [13000](http://gravitino:13000/)                  |
 
 ## Playground usage
 
